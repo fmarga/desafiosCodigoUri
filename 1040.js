@@ -9,20 +9,6 @@ Saída
 Todas as respostas devem ser apresentadas com uma casa decimal. As mensagens devem ser impressas conforme a descrição do problema. Não esqueça de imprimir o enter após o final de cada linha, caso contrário obterá "Presentation Error".*/
 
 const input = require('fs').readFileSync('./dev/stdin', 'utf8');
-/*let lines = input.split('\n');
-console.log(lines);
-let n1 = parseFloat(lines.shift());
-console.log(lines);
-let n2 = parseFloat(lines.shift());
-console.log(lines);
-let n3 = parseFloat(lines.shift());
-console.log(lines);
-let n4 = parseFloat(lines.shift());
-console.log(lines);
-let exame = parseFloat(lines.pop());
-
-console.log(lines);*/
-
 let [n1, n2, n3, n4] = input.split(' ').map(item => parseFloat(item));
 let [n, n5]= input.split('\n').map(item => parseFloat(item));
 
