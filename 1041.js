@@ -14,20 +14,20 @@ const input = require('fs').readFileSync('./dev/stdin', 'utf8');
 let [x, y] = input.split(' ').map(item => parseFloat(item).toFixed(1));
 let quad;
 
-if(x > 0 && y > 0){
+if(x > 0.0 && y > 0.0){
     quad = 'Q1';
-}else if(x < 0 && y > 0){
+}else if(x < 0.0 && y > 0.0){
     quad = 'Q2';
-}else if(x < 0 && y < 0){
+}else if(x < 0.0 && y < 0.0){
     quad = 'Q3';
-}else if(x > 0 && y < 0){
+}else if(x > 0.0 && y < 0.0){
     quad = 'Q4';
-}else if(x === 0 && y === 0){
+}else if(x === 0.0 && y === 0.0){
     quad = 'Origem';
-}else if((x === 0 && y < 0) || (x === 0 && y > 0)){
-    quad = 'Eixo X';
-}else if((y === 0 && x < 0) || (y === 0 && x > 0)){
+}else if(x === 0.0){
     quad = 'Eixo Y';
+}else if(y === 0.0){
+    quad = 'Eixo X';
 };
 
 console.log(quad);
